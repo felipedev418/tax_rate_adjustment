@@ -1,0 +1,29 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "57cc3b074e91e75809dde4e16eef8c4b"
+application_url = "https://pr-nutritional-denial-challenged.trycloudflare.com"
+embedded = true
+name = "app2"
+handle = "app2-282"
+
+[build]
+include_config_on_deploy = true
+dev_store_url = "tax-rate-testing.myshopify.com"
+automatically_update_urls_on_dev = true
+
+[webhooks]
+api_version = "2024-10"
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "write_products,write_discounts,read_metaobject_definitions,write_metaobject_definitions,read_metaobjects,write_metaobjects,read_orders,write_orders,read_customers,write_customers"
+
+[auth]
+redirect_urls = [
+  "https://pr-nutritional-denial-challenged.trycloudflare.com/auth/callback",
+  "https://pr-nutritional-denial-challenged.trycloudflare.com/auth/shopify/callback",
+  "https://pr-nutritional-denial-challenged.trycloudflare.com/api/auth/callback"
+]
+
+[pos]
+embedded = false

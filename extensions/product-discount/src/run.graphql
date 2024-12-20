@@ -1,0 +1,19 @@
+query Input {
+  cart {
+    lines {
+      quantity
+      merchandise {
+        __typename
+        ... on ProductVariant {
+          id
+        }
+      }
+    }
+  }
+  shop {
+    metafield(namespace: "tom-blanchard-functions", key: "config") {
+      type
+      value
+    }
+  }
+}
